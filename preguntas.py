@@ -215,7 +215,7 @@ def pregunta_03():
     columnTransformer = make_column_transformer(
         (
             OneHotEncoder(),
-            ['categorical_column'],
+            ['checking_balance','credit_history','purpose','savings_balance','employment_length','personal_status','other_debtors','property','installment_plan','housing','telephone','foreign_worker','job'],
         ),
         remainder="passthrough",
     )
