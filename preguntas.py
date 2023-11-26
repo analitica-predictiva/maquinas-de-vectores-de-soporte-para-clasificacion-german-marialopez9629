@@ -200,11 +200,11 @@ def pregunta_03():
     # Importe SVC
     # Importe OneHotEncoder
     # Importe Pipeline
-     from sklearn.compose import ColumnTransform
-     from sklearn.preprocessing import OneHotEncoder
-     from sklearn.pipeline import Pipeline
-     from sklearn.svm import SVC
-     
+    from sklearn.compose import ColumnTransform
+    from sklearn.preprocessing import OneHotEncoder
+    from sklearn.pipeline import Pipeline
+    from sklearn.svm import SVC
+
 
     # Cargue las variables.
     X_train, _, y_train, _ = pregunta_02()
