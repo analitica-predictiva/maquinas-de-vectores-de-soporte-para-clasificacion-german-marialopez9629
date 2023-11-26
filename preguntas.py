@@ -214,22 +214,22 @@ def pregunta_03():
     # columnas numéricas no deben ser transformadas.
     columnTransformer = make_column_transformer(
         (
-            ____(),
-            ____(____=____),
+            OneHotEncoder(),
+            ['categorical_column'],
         ),
-        remainder=____,
+        remainder="passthrough",
     )
 
     # Cree un pipeline que contenga el columnTransformer y el modelo SVC.
-    pipeline = ____(
+    pipeline = Pipeline(
         steps=[
-            ("____", ____),
-            ("____", ____),
+            ("columnTransformer", columnTransformer),
+            ("SVC", SVC()),
         ],
     )
 
     # Entrene el pipeline con los datos de entrenamiento.
-    ____.____(____, ____)
+    pipeline.fit(X_train, y_train)
 
     # # Retorne el pipeline entrenado
     return pipeline
